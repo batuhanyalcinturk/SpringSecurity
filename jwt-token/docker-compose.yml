@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql
+    restart: always
+    container_name: graysan-db
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: graysan-db
+      MYSQL_USER: graysan
+      MYSQL_PASSWORD: pass
+    ports:
+      - '3306:3306'
